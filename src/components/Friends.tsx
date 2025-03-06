@@ -83,11 +83,12 @@ const Friends = () => {
             <div className="flex flex-col items-center space-y-4">
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-inner relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent animate-rotate-slow"></div>
-                <div className="w-full h-full rounded-full bg-muted overflow-hidden">
-                  {/* Profile image placeholder - in a real site, use a real image */}
-                  <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-primary animate-pulse-glow">
-                    H
-                  </div>
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/bbdafb5e-1ee0-4a3a-8302-bf8b86a215e5.png" 
+                    alt="Hunter" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
