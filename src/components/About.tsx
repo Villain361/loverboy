@@ -110,23 +110,6 @@ const About = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '600ms' }}>
-          <div className="relative group max-w-xs">
-            <div className="absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-lg blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
-            <div className="relative glass-card overflow-hidden rounded-lg">
-              <img 
-                src="/lovable-uploads/bbdafb5e-1ee0-4a3a-8302-bf8b86a215e5.png" 
-                alt="Friend" 
-                className="w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="text-lg font-medium">My Friend</h3>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
