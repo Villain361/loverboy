@@ -1,13 +1,16 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+import CustomCursor from './CustomCursor';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showCustomCursor, setShowCustomCursor] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     setIsVisible(true);
+    setShowCustomCursor(true);
     
     const handleMouseMove = (e: MouseEvent) => {
       const hero = heroRef.current;
@@ -25,11 +28,24 @@ const Hero = () => {
         subtitle.style.transform = `translate3d(${x * 10}px, ${y * 5}px, 0)`;
       }
     };
+
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const heroRect = heroRef.current.getBoundingClientRect();
+        if (heroRect.bottom <= 0) {
+          setShowCustomCursor(false);
+        } else {
+          setShowCustomCursor(true);
+        }
+      }
+    };
     
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   
@@ -39,6 +55,8 @@ const Hero = () => {
       ref={heroRef}
       className="h-screen flex items-center justify-center relative overflow-hidden"
     >
+      {showCustomCursor && <CustomCursor />}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-6">
           <div
