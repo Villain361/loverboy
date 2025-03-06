@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-4">
           <p className="text-center text-muted-foreground">
             <span className="inline-flex items-center">
-              Made with <Heart className="mx-1 text-destructive animate-pulse-glow" size={16} /> by Lover Boy
+              Made with <Heart className="mx-1 text-destructive animate-pulse-glow" size={16} /> by Hunter
             </span>
           </p>
           
