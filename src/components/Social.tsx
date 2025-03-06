@@ -75,7 +75,7 @@ const Social = () => {
           <SocialLink 
             href="https://discord.gg/rdKrjeUCj8" 
             icon={<MessageSquare className="group-hover:animate-bounce-subtle" />} 
-            label="Join my Discord Server" 
+            label="Join our Discord Server" 
             delay={100}
           />
           
